@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La exploradora</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;800&family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/15acc34579.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+
+
+<body>
+    <header>
+        <h3 class="logo">EXPLORADORA</h3>
+       <!--<input id="icono-menu" class="icono-menu" type="checkbox"></input>
+        <label for="icono-menu" class="burger">
+            <span><i class="fas fa-bars"></i></span>
+        </label>
+    -->
+        <nav>
+            <ul>
+                <li><a class="nav-boton" href="index.html">Home</a></li>
+                <li><a class="nav-boton" href="cursos.html">Cursos</a></li>
+                <li><a class="nav-boton" href="eventos.html">Eventos</a></li>
+                <li><a class="nav-boton" href="noticias.html">Noticias</a></li>
+                <li><a class="nav-boton" href="contacto.html">Contacto </a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="app">
+            <img v-bind:src="img" v-bind:alt="name">
+          {{ name }}
+          <span v-if="changePercent >0">👍👍</span>
+          <span v-else-if="changePercent  <0">🤢</span>
+          <span v-else>👌</span>
+
+          <span v-show="changePercent >0">👍👍</span>
+          <span v-show="changePercent  <0">🤢</span>
+          <span v-show ="changePercent ==0">👌</span>
+
+          <input type="button" v-on:click="toggleShowPrices"> Ver </input>
+          <ul v-show="showPrices">
+              <!--p:valor i: indice-->
+              <li v-for="(p,i) in prices" v-bin:key="p">
+                  {{i}}-{{p}}
+              </li>
+          </ul>
+          <ul v-show="showPrices">
+            <!--p:valor i: indice-->
+            <li  v-for="(p,i) in pricesWithDays" v-bin:key="p.day">
+                {{i}}-{{p.day}}-{{p.value}}
+            </li>
+        </ul>
+        </div> 
+        <seccion class="container sidebar">
+            <article class="card">
+                <h1>Cursos gratis!!</h1>
+                <img src="img/cursos.png">
+    
+                <p>Capacítate y mejora tus competencias digitales, ampliarás tus conocimientos y te volverás más empleable. Selecciona el curso de tu preferencia, organiza tu agenda y empecemos. ¡El mundo es tuyo!😎
+                    ¿Cómo te inscribes?
+                    👉 1. Ingresa al siguiente enlace: https://cutt.ly/SuKP3oT
+                    👉 2. Escribe tu correo y selecciona la opción SENAJU.
+                    Los cursos tienen una duración de 30 a 40 horas, aproximadamente, y están habilitados hasta el 30 de setiembre. Al terminar el curso, satisfactoriamente, accederás a un certificado digital gratuito otorgado por la Fundación Telefónica Perú.     </article>
+                </p>
+
+            </article>
+            <aside class="card">
+                <h2>Curso de python</h2>
+                <img src="img/cursito.png">
+                <p>Titulo Blog, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    
+                <h2>Curso de marketing</h2>
+                <img src="img/curso.png">
+                <p>Titulo Blog, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </aside>
+        </seccion>
+    
+
+    </main>
+    <footer class="fondo">
+        <p >Derechos reservados @2020</p>
+        <p >
+            <i class="fab fa-facebook fa-1x "></i>
+            <i class="fab fa-github  fa-1x"></i>
+        </p>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

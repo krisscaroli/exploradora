@@ -1,0 +1,199 @@
+
+*{
+margin: 0;
+padding: 0;
+font-family: "hello";
+}
+
+html{
+    box-sizing: border-box;
+    /*1rem=10px*/
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+img {
+    max-width: 99%;
+}
+/*el ancho ingluye padding y border*/
+
+@font-face{
+    font-family: "hello";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/PaperFlowers.otf');
+}
+
+nav ul {
+    font-size: 4rem;
+    display: flex;
+    
+
+}
+
+nav a {
+   text-decoration: none;
+   
+    
+}
+nav li a:hover{
+    color:#fff;
+    background-color: #4444;
+    transition-property: all;
+    transition-duration: 3ms;
+    transition-delay: 1s;
+}
+nav li{
+    list-style: none;
+    width: 200px;
+    padding: 15px;
+}
+
+nav{
+    background-color:turquoise;
+}
+
+main {
+
+    left:0;
+    margin:0 auto;
+    font-size: 2.5rem;
+background-color:#ffff00;
+text-align: center;
+width: 100%;
+
+}
+
+.entrada-inicio{
+    /*display: flex;*/
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+   /* background-color:red;*/
+}
+
+.entrada-card {
+    background-color: chartreuse;
+    padding: 10px 20px;
+    margin: 5px;
+    
+
+
+}
+
+.entrada-card p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+}
+
+@media(min-width:480px){
+    .entrada-inicio {
+        display: flex;
+        justify-content: space-between;
+    }
+    .entrada-card {
+        flex-basis: calc(33.3%-1rem);
+    }
+}
+
+footer{
+   /* position: fixed;*/
+  /*  display: block;
+    bottom:0;
+    left:0;
+    height:8rem;
+    width: 100%;
+    z-index: 20;
+    margin:0;
+    font-size: 2.8rem;
+    padding: 10px;
+    text-align: center;
+*/
+}
+/*cuando queremos poner al centro ponemos elemento block*/
+/*margin:auto;*/
+
+.container{
+    background-color: #ffff00;
+    color: #000;
+  /*  display: block;*/
+    border:0.2rem dashed #000;
+    border-radius: 5px;
+    height: 6rem;
+    padding:40px;
+    /*top rigth bottom left*
+    width: 90%;
+    /*em depende del tamnano del font q la contiene*/
+    /*margin:5em;*/
+    margin: 0 auto;
+    max-width: 1200px;
+    font-size: 4rem;
+
+    /*box-sizing: content-box;
+    /*desbordamiento*/
+    /*hidden auto*/
+   /* overflow: auto;
+
+    /*despues del maximo se reduce*/
+    /*solo hasta el minimo ya no reduce*/
+    /*max-width: 1000px;
+    min-width: 90px;*/
+}
+/*
+inline no respeta el width ni el height
+inline-block 
+*/
+.card {
+    
+}
+
+.fondo{
+    background-color: orange;
+}
+h1 {
+/*RRGGBB*/
+/*0123456789 A B C B D E F*/
+/*FFFFFF= BLANCO 000000 = NEGRO*/
+color: #000000;
+font-size: 60px;
+font-weight: 700;
+
+}
+
+/*h2 {
+    font-family: 'Roboto', sans-serif;
+}
+*/
+/*!important*/
+
+
+.texto-center{
+    text-align: center;
+}
+
+label,
+input,
+select,
+textarea {
+    display: block;
+    margin-top: 10px;
+}
+
+main img, main div{
+display: inline-block;
+}
+
+main div{
+    background-color: violet;
+    width: 70%;
+}
+
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+    letter-spacing: 1px;
+}
